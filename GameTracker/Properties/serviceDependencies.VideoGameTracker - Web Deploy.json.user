@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-06-04T16:35:53.560631Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "VideoGameTracker_rg"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "b4143ab9-e1cd-42ec-85ec-47faee74d058"
+    }
+  }
+}
