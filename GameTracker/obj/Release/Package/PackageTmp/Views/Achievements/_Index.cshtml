@@ -20,9 +20,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.AchievmentID)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.AchievementName)
         </th>
         <th>
@@ -37,9 +34,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AchievmentID)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AchievementName)
             </td>
