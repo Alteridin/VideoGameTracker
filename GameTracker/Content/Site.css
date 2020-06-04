@@ -29,9 +29,14 @@ textarea {
 .jumbotron {
     background-color: slategray;
     color: white;
+    text-align: center;
 }
 
 .btn{
     background-color: blueviolet;
     color: white;
+}
+
+footer{
+    text-align: center;
 }

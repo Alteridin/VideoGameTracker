@@ -1,7 +1,12 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+
+@section FullScreen
+{
+}
+
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
 <div class="jumbotron">
     <h1>GameTracker - Tracking your games helps you stay on Track</h1>
@@ -22,7 +27,3 @@
         <p><a class="btn btn-default" href="/Home/About">Learn About GameTracker &raquo;</a></p>
     </div>
 </div>
-
-@section LeftSection
-{
-}
