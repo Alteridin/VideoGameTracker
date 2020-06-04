@@ -1,0 +1,66 @@
+﻿@model IEnumerable<GameTracker.Models.QuestModel.QuestList>
+@{
+    ViewBag.Title = "Quest";
+    <h3>Quests</h3>
+}
+
+<p>
+    @Html.ActionLink("Create New Quest", "../Quests/QuestCreate", new { }, htmlAttributes: new { @class = "btn" })
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainQuest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestComplete)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainQuest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestComplete)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "../Quests/QuestEdit", new { id = item.QuestID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Details", "../Quests/QuestDetails", new { id = item.QuestID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Delete", "../Quests/QuestDelete", new { id = item.QuestID }, htmlAttributes: new { @class = "btn" })
+            </td>
+        </tr>
+    }
+</table>
+<hr />

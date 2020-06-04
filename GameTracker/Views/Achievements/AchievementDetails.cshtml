@@ -1,0 +1,49 @@
+﻿@model GameTracker.Models.AchievementModel.AchievementDetail
+
+@{
+    ViewBag.Title = "Achievement Details";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Achievement Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementCompleted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "AchievementEdit", new { id = Model.AchievementID }, htmlAttributes: new { @class = "btn" }) |
+    @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+</p>

@@ -1,0 +1,55 @@
+﻿@model GameTracker.Models.QuestModel.QuestDetail
+
+@{
+    ViewBag.Title = "Quest Deletion";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Delete a Quest</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainQuest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainQuest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestComplete)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+        </div>
+    }
+</div>

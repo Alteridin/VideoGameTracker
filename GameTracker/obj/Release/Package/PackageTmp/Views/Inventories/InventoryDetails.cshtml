@@ -1,0 +1,57 @@
+﻿@model GameTracker.Models.InventoryModel.InventoryDetail
+
+@{
+    ViewBag.Title = "Inventory Details";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Inventory Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InventoryItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemAcquired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemAcquired)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "InventoryEdit", new { id = Model.InventoryID }, htmlAttributes: new { @class = "btn" }) |
+    @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+</p>

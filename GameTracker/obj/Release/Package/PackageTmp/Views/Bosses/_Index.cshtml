@@ -1,0 +1,50 @@
+﻿@model IEnumerable<GameTracker.Models.BossModel.BossList>
+@{
+    ViewBag.Title = "Boss";
+    <h3>Bosses</h3>
+}
+
+<p>
+    @Html.ActionLink("Create New Boss", "../Bosses/BossCreate", new { }, htmlAttributes: new { @class = "btn" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BossID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BossName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BossNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BossBeaten)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BossID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BossName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BossNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BossBeaten)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "../Bosses/BossEdit", new { id=item.BossID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Details", "../Bosses/BossDetails", new { id=item.BossID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Delete", "../Bosses/BossDelete", new { id=item.BossID }, htmlAttributes: new { @class = "btn" })
+            </td>
+        </tr>
+    }
+</table>
+<hr />

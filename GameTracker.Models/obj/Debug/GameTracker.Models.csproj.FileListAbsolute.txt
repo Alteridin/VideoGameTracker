@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\GameTracker.Models.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\GameTracker.Models.pdb
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\GameTracker.Data.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\GameTracker.Data.pdb
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\GameTracker.Data.dll.config
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\obj\Debug\GameTracker.Models.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\obj\Debug\GameTracker.Models.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\obj\Debug\GameTracker.Models.csproj.CopyComplete
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\obj\Debug\GameTracker.Models.dll
+C:\ElevenFiftyProjects\Red Badge\GameMVC\GameTracker.Models\obj\Debug\GameTracker.Models.pdb

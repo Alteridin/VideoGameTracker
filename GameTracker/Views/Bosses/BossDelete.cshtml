@@ -1,0 +1,48 @@
+﻿@model GameTracker.Models.BossModel.BossDetail
+
+@{
+    ViewBag.Title = "Boss Deletion";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Delete a Boss</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossBeaten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossBeaten)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+        </div>
+    }
+</div>

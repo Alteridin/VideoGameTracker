@@ -1,0 +1,48 @@
+﻿@model GameTracker.Models.AchievementModel.AchievementDetail
+
+@{
+    ViewBag.Title = "Achievement Deletion";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Delete an Achievement</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AchievementCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AchievementCompleted)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+        </div>
+    }
+</div>

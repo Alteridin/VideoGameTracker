@@ -1,0 +1,57 @@
+﻿@model GameTracker.Models.QuestModel.QuestDetail
+
+@{
+    ViewBag.Title = "Quest Details";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Quest Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainQuest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainQuest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestComplete)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "QuestEdit", new { id = Model.QuestID }, htmlAttributes: new { @class = "btn" }) |
+    @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+</p>

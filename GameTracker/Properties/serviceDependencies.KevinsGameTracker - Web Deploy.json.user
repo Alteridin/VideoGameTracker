@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "KevinsGameTracker_rg"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "b4143ab9-e1cd-42ec-85ec-47faee74d058"
+    }
+  }
+}

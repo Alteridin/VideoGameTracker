@@ -1,0 +1,49 @@
+﻿@model GameTracker.Models.BossModel.BossDetail
+
+@{
+    ViewBag.Title = "Boss Details";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Boss Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BossID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BossBeaten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BossBeaten)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "BossEdit", new { id = Model.BossID }, htmlAttributes: new { @class = "btn" }) |
+    @Html.ActionLink("Back to List", "../VideoGames/Index", new { }, htmlAttributes: new { @class = "btn" })
+</p>

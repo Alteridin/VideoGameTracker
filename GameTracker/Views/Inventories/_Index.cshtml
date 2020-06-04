@@ -1,0 +1,66 @@
+﻿@model IEnumerable<GameTracker.Models.InventoryModel.InventoryList>
+@{
+    ViewBag.Title = "Inventory";
+    <h3>Inventories</h3>
+}
+
+<p>
+    @Html.ActionLink("Create New Item", "../Inventories/InventoryCreate", new { }, htmlAttributes: new { @class = "btn" })
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InventoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InventoryItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemAcquired)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemAcquired)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "../Inventories/InventoryEdit", new { id = item.InventoryID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Details", "../Inventories/InventoryDetails", new { id = item.InventoryID }, htmlAttributes: new { @class = "btn" }) |
+                @Html.ActionLink("Delete", "../Inventories/ItemDelete", new { id = item.InventoryID }, htmlAttributes: new { @class = "btn" })
+            </td>
+        </tr>
+    }
+</table>
+<hr />

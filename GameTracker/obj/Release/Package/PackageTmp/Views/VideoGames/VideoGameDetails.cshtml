@@ -1,0 +1,56 @@
+﻿@model GameTracker.Models.VideoGameModel.VideoGameDetail
+
+@{
+    ViewBag.Title = "Video Game Details";
+}
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Video Game Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoGameName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoGameName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoGameGenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoGameGenre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoGameNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoGameNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimesBeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimesBeat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "VideoGameEdit", new { id = Model.VideoGameID }, htmlAttributes: new { @class = "btn" }) |
+</p>
+<hr />
+@Html.Partial("../Quests/_Index", (GameTracker.Models.QuestModel.QuestList[])ViewBag.Quests, new ViewDataDictionary { { "VideoGameID", Model.VideoGameID } })
+@Html.Partial("../Inventories/_Index", (GameTracker.Models.InventoryModel.InventoryList[])ViewBag.Inventories, new ViewDataDictionary { { "VideoGameID", Model.VideoGameID } })
+@Html.Partial("../Bosses/_Index", (GameTracker.Models.BossModel.BossList[])ViewBag.Bosses, new ViewDataDictionary { { "VideoGameID", Model.VideoGameID } })
+@Html.Partial("../Achievements/_Index", (GameTracker.Models.AchievementModel.AchievementList[])ViewBag.Achievements, new ViewDataDictionary { { "VideoGameID", Model.VideoGameID } })
+<p>
+    @Html.ActionLink("Back to List", "Index", new { }, htmlAttributes: new { @class = "btn" })
+</p>
